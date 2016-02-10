@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="web" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXa-MP-vK9">
+                                <rect key="frame" x="319" y="69" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.16219594009999999" green="1" blue="0.81624361479999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="tapBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqi-vS-oC0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCy-P1-InI">
+                                <rect key="frame" x="319" y="126" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.37403381200000002" blue="0.96880988589999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="PIC"/>
+                                <connections>
+                                    <action selector="tapLoadImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="kJJ-l4-psE"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0pp-1h-hOM">
+                                <rect key="frame" x="209" y="212" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="eUr-66-eoU"/>
+                                    <constraint firstAttribute="height" constant="128" id="sUR-37-FND"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVe-wY-Q32">
+                                <rect key="frame" x="303" y="496" width="63" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.74889697030000002" blue="0.350458667" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="LoadText"/>
+                                <connections>
+                                    <action selector="tapLoadText1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AzM-XJ-JOT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VVe-wY-Q32" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Pi-qA-LKn"/>
+                            <constraint firstItem="jXa-MP-vK9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3jR-sP-hKR"/>
+                            <constraint firstItem="VVe-wY-Q32" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4W3-Zg-tX5"/>
+                            <constraint firstItem="UCy-P1-InI" firstAttribute="top" secondItem="jXa-MP-vK9" secondAttribute="bottom" constant="27" id="HGa-dJ-ebx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VVe-wY-Q32" secondAttribute="bottom" constant="74" id="XlB-39-tp9"/>
+                            <constraint firstItem="jXa-MP-vK9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zev-fD-j0w"/>
+                            <constraint firstItem="0pp-1h-hOM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f8K-n5-9OE"/>
+                            <constraint firstItem="0pp-1h-hOM" firstAttribute="top" secondItem="UCy-P1-InI" secondAttribute="bottom" constant="56" id="j7W-eO-P7M"/>
+                            <constraint firstItem="UCy-P1-InI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yDO-Ws-c1L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myImageView" destination="0pp-1h-hOM" id="UYf-vw-DCe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
